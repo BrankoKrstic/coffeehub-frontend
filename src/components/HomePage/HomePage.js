@@ -9,8 +9,8 @@ export default function HomePage() {
 				<h1>CoffeeHub</h1>
 			</div>
 			<div className="HomePage-linkcontainer">
-				<LinkPrimary to="#">Start Shopping</LinkPrimary>
-				<LinkPrimary to="#">Learn Our Story</LinkPrimary>
+				<LinkPrimary to="/store">Start Shopping</LinkPrimary>
+				<LinkPrimary to="/about">Learn Our Story</LinkPrimary>
 			</div>
 		</div>
 	);
