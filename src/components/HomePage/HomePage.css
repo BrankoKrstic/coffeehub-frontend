@@ -6,4 +6,40 @@
 		url("./homepage-background.jpg");
 	background-size: cover;
 	background-position: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.HomePage-linkcontainer {
+	height: 57%;
+	width: 20%;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+}
+
+.HomePage-titlecontainer {
+	height: 43%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-end;
+}
+
+.HomePage-titlecontainer h1,
+.HomePage-titlecontainer p {
+	text-align: center;
+	color: white;
+	font-family: "Dancing Script", cursive;
+}
+
+.HomePage-titlecontainer p {
+	font-size: 2rem;
+}
+
+.HomePage-titlecontainer h1 {
+	font-size: 6rem;
 }
