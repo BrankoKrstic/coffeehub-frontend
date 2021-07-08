@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Navbar from "../../components/Navigation/Navbar/Navbar";
 import HomePage from "../../components/HomePage/HomePage";
+import About from "../../components/About/About";
 import "./CoffeeHub.css";
 
 export default function CoffeeHub() {
@@ -10,7 +11,7 @@ export default function CoffeeHub() {
 				<Switch>
 					<Route path="/about">
 						<Navbar />
-						<div>About</div>
+						<About />
 					</Route>
 					<Route path="/store">
 						<Navbar />

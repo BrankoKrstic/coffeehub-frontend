@@ -20,7 +20,7 @@ export default function Navbar() {
 					to="/about"
 					activeClassName="current"
 				>
-					About Us
+					About Us{/*  TODO: IMAGE PARTIALLY ACROSS SCREEN */}
 				</NavLink>
 				<NavLink
 					className="Navbar-link"
