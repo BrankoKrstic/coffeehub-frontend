@@ -1,14 +1,14 @@
-import { useState, useEffect } from "react";
-import axios from "../../axios-orders";
+import { useEffect } from "react";
+import { initProducts } from "../../store/actions/products";
+import { useSelector, useDispatch } from "react-redux";
 import ProductCard from "../../components/ProductCard/ProductCard";
 import "./Store.css";
 
 export default function Store() {
-	const [productState, setProductState] = useState([]);
+	const products = useSelector((state) => state.products);
+	const dispatch = useDispatch();
 	useEffect(() => {
-		axios.get("/products").then((res) => {
-			setProductState(res.data.products);
-		});
+		dispatch(initProducts());
 	}, []);
 	return (
 		<div className="Store">
@@ -23,7 +23,7 @@ export default function Store() {
 					<button className="Store-filter-button">Gear</button>
 				</div>
 				<div className="Store-products">
-					{productState.map((product, i) => (
+					{products.map((product, i) => (
 						<ProductCard key={i} {...product} />
 					))}
 				</div>
