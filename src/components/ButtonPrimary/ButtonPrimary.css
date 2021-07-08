@@ -7,4 +7,9 @@
 	border: none;
 	background-color: rgb(233, 151, 0);
 	cursor: pointer;
+	transition: all 0.1s ease-in;
+}
+
+.ButtonPrimary:hover {
+	background-color: rgb(197, 128, 0);
 }

@@ -3,6 +3,7 @@ import Navbar from "../../components/Navigation/Navbar/Navbar";
 import Store from "../Store/Store";
 import HomePage from "../../components/HomePage/HomePage";
 import About from "../../components/About/About";
+import Cart from "../Cart/Cart";
 import "./CoffeeHub.css";
 
 export default function CoffeeHub() {
@@ -20,7 +21,7 @@ export default function CoffeeHub() {
 					</Route>
 					<Route path="/cart">
 						<Navbar />
-						<div>cart</div>
+						<Cart />
 					</Route>
 					<Route path="/">
 						<HomePage />

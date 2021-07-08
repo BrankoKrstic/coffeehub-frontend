@@ -1,0 +1,32 @@
+.Cart {
+	width: 100vw;
+	height: calc(100vh - 4.5rem);
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.Cart-content {
+	height: 100%;
+	flex: 1 1 1;
+}
+
+.Cart-content h2 {
+	padding: 2rem;
+}
+
+.Cart-image {
+	height: 100%;
+	animation-name: slide-up;
+	animation-duration: 0.9s;
+}
+
+@keyframes slide-up {
+	0% {
+		transform: translateY(100vh);
+	}
+	100% {
+		transform: translateY(0);
+	}
+}
