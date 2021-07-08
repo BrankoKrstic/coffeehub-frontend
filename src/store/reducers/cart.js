@@ -22,7 +22,7 @@ const reducer = (state = initialState, action) => {
 		case actionTypes.CART_INCREASE_QTY:
 			return {
 				...state,
-				cartItems: state.cartItmes.map((item) => {
+				cartItems: state.cartItems.map((item) => {
 					if (item.product.id === action.id) {
 						return {
 							product: item.product,

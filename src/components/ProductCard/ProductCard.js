@@ -10,7 +10,7 @@ export default function ProductCard(props) {
 					<div>{props.name}</div>
 					<div>${props.price}</div>
 				</div>
-				<ButtonPrimary>Buy</ButtonPrimary>
+				<ButtonPrimary clicked={props.addItem}>Buy</ButtonPrimary>
 			</div>
 		</div>
 	);
