@@ -12,7 +12,15 @@
 	width: 90%;
 }
 
-.ProductCard-textwrapper {
+.ProductCard-content {
 	width: 90%;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.ProductCard-textwrapper {
+	width: 100%;
 	text-align: left;
 }

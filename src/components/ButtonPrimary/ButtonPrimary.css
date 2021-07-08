@@ -1,0 +1,9 @@
+.ButtonPrimary {
+	height: 80%;
+	padding: 0 1.5rem;
+	border-radius: 0.5rem;
+	color: #fff;
+	outline: none;
+	border: none;
+	background-color: rgb(233, 151, 0);
+}
