@@ -1,0 +1,18 @@
+.ProductCard {
+	height: auto;
+	padding: 1rem;
+	width: 30%;
+	margin: 1rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.ProductCard img {
+	width: 90%;
+}
+
+.ProductCard-textwrapper {
+	width: 90%;
+	text-align: left;
+}

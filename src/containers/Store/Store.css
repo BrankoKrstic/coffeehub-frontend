@@ -53,3 +53,8 @@
 .Store-filter-active {
 	color: rgb(233, 151, 0);
 }
+
+.Store-products {
+	display: flex;
+	flex-direction: row;
+}
