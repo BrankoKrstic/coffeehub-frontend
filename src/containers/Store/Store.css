@@ -1,0 +1,55 @@
+.Store {
+	width: 70%;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.Store h1 {
+	font-weight: 300;
+	letter-spacing: 2px;
+	color: #444;
+	margin: 2rem;
+}
+
+.Store-main {
+	width: 100%;
+	min-height: 70vh;
+	display: flex;
+	flex-direction: row;
+}
+
+.Store-filters {
+	width: 20%;
+	border-right: 1px solid #ccc;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+.Store-filter-button {
+	width: 100%;
+	text-align: left;
+	outline: none;
+	border: none;
+	color: #333;
+	background-color: transparent;
+	padding: 0.5rem 1rem;
+	font-size: 1rem;
+	cursor: pointer;
+}
+
+.Store-filters h3 {
+	text-transform: uppercase;
+	padding: 1rem;
+	font-size: 0.9rem;
+}
+
+.Store-products {
+	width: 80%;
+}
+
+.Store-filter-active {
+	color: rgb(233, 151, 0);
+}
