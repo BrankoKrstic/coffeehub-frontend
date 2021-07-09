@@ -1,0 +1,49 @@
+.Button {
+	outline: none;
+	border: none;
+	cursor: pointer;
+}
+
+.Primary {
+	height: 80%;
+	padding: 0 1.5rem;
+	border-radius: 0.5rem;
+	color: #fff;
+	background-color: rgb(233, 151, 0);
+	transition: all 0.1s ease-in;
+}
+
+.Primary:hover {
+	background-color: rgb(197, 128, 0);
+}
+
+.Secondary {
+	padding: 1rem 3rem;
+	font-size: 1.1rem;
+	letter-spacing: 1px;
+	font-weight: bold;
+	border-radius: 1rem;
+	margin-top: 0.5rem;
+	background-color: #333;
+	color: rgb(248, 194, 93);
+	transition: all 0.2s ease-in;
+}
+
+.Secondary:hover {
+	background-color: #444;
+}
+
+.Remove {
+	padding: 1rem 2rem;
+	border-radius: 1rem;
+	background-color: transparent;
+	font-weight: bold;
+	font-size: 2rem;
+	color: rgb(255, 17, 0);
+	transition: all 0.2s ease-in;
+}
+
+.Remove:hover {
+	transform: scale(1.1);
+	color: rgb(255, 111, 101);
+}

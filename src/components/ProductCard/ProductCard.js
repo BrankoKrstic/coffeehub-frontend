@@ -1,4 +1,4 @@
-import ButtonPrimary from "../ButtonPrimary/ButtonPrimary";
+import Button from "../Button/Button";
 import "./ProductCard.css";
 
 export default function ProductCard(props) {
@@ -10,7 +10,9 @@ export default function ProductCard(props) {
 					<div>{props.name}</div>
 					<div>${props.price}</div>
 				</div>
-				<ButtonPrimary clicked={props.addItem}>Buy</ButtonPrimary>
+				<Button clicked={props.addItem} primary>
+					Buy
+				</Button>
 			</div>
 		</div>
 	);
