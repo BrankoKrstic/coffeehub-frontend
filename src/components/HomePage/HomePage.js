@@ -1,4 +1,4 @@
-import LinkPrimary from "../Navigation/LinkPrimary/LinkPrimary";
+import StoreLink from "../Navigation/StoreLink/StoreLink";
 import "./HomePage.css";
 
 export default function HomePage() {
@@ -9,8 +9,12 @@ export default function HomePage() {
 				<h1>CoffeeHub</h1>
 			</div>
 			<div className="HomePage-linkcontainer">
-				<LinkPrimary to="/store">Start Shopping</LinkPrimary>
-				<LinkPrimary to="/about">Learn Our Story</LinkPrimary>
+				<StoreLink primary to="/store">
+					Start Shopping
+				</StoreLink>
+				<StoreLink primary to="/about">
+					Learn Our Story
+				</StoreLink>
 			</div>
 		</div>
 	);

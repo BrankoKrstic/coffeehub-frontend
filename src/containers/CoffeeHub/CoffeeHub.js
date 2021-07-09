@@ -4,6 +4,7 @@ import Store from "../Store/Store";
 import HomePage from "../../components/HomePage/HomePage";
 import About from "../../components/About/About";
 import Cart from "../Cart/Cart";
+import Checkout from "../Checkout/Checkout";
 import "./CoffeeHub.css";
 
 export default function CoffeeHub() {
@@ -22,6 +23,9 @@ export default function CoffeeHub() {
 					<Route path="/cart">
 						<Navbar />
 						<Cart />
+					</Route>
+					<Route path="/checkout">
+						<Checkout />
 					</Route>
 					<Route path="/">
 						<HomePage />

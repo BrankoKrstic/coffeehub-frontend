@@ -6,7 +6,9 @@ import "./Navbar.css";
 export default function Navbar() {
 	return (
 		<nav className="Navbar">
-			<div className="Navbar-logo">CoffeeHub</div>
+			<NavLink to="/" className="Navbar-logo">
+				CoffeeHub
+			</NavLink>
 			<div className="Navbar-link-container">
 				<NavLink
 					className="Navbar-link"

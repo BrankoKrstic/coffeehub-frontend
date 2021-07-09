@@ -1,0 +1,35 @@
+.StoreLink {
+	text-decoration: none;
+}
+
+.Link-Primary {
+	color: white;
+	letter-spacing: 2px;
+	font-size: 1.5rem;
+	border: 2px solid white;
+	background-color: rgba(255, 255, 255, 0.2);
+	border-radius: 0.5rem;
+	padding: 1rem;
+	margin: 2rem;
+	transition: all 0.3s ease-in;
+}
+
+.Link-Primary:hover {
+	background-color: rgba(255, 255, 255, 0.1);
+}
+
+.Link-Secondary {
+	padding: 1rem 3rem;
+	font-size: 1.1rem;
+	letter-spacing: 1px;
+	font-weight: bold;
+	border-radius: 1rem;
+	margin-top: 0.5rem;
+	background-color: #333;
+	color: rgb(248, 194, 93);
+	transition: all 0.2s ease-in;
+}
+
+.Link-Secondary:hover {
+	background-color: #444;
+}

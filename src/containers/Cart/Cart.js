@@ -1,6 +1,6 @@
 import CartImage from "./CartPageImage.jpg";
 import CartItem from "../../components/CartItem/CartItem";
-import Button from "../../components/Button/Button";
+import StoreLink from "../../components/Navigation/StoreLink/StoreLink";
 import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
 import {
@@ -53,7 +53,9 @@ export default function Cart() {
 				</div>
 				<div className="Cart-summary">
 					Total: ${totalPrice}
-					<Button secondary>Proceed</Button>
+					<StoreLink secondary to="/checkout">
+						Proceed
+					</StoreLink>
 				</div>
 			</div>
 			<img src={CartImage} alt="ShoppingCart" className="Cart-image" />
