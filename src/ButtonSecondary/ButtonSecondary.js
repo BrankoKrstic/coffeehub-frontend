@@ -1,4 +1,4 @@
-import "./ButtonSecondary";
+import "./ButtonSecondary.css";
 
 export default function ButtonSecondary(props) {
 	return (

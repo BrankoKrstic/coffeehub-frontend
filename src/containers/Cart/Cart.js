@@ -1,4 +1,5 @@
 import CartImage from "./CartPageImage.jpg";
+import ButtonSecondary from "../../ButtonSecondary/ButtonSecondary";
 import { useSelector } from "react-redux";
 import "./Cart.css";
 
@@ -22,7 +23,10 @@ export default function Cart() {
 						<p key={item.product.id}>{item.product.name}</p>
 					))}
 				</div>
-				<div className="Cart-summary">Total: ${totalPrice}</div>
+				<div className="Cart-summary">
+					Total: ${totalPrice}
+					<ButtonSecondary>Proceed</ButtonSecondary>
+				</div>
 			</div>
 			<img src={CartImage} alt="ShoppingCart" className="Cart-image" />
 		</div>

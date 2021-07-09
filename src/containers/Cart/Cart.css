@@ -9,11 +9,28 @@
 
 .Cart-content {
 	height: 100%;
+	width: 100%;
+	margin: 1rem;
 	flex: 1 1 1;
 }
 
 .Cart-content h2 {
 	padding: 2rem;
+}
+
+.Cart-item-container {
+	border: 1px solid grey;
+	width: 100%;
+	height: calc(100% - 12rem);
+	overflow-y: scroll;
+}
+
+.Cart-summary {
+	width: 100%;
+	font-weight: bold;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
 }
 
 .Cart-image {
