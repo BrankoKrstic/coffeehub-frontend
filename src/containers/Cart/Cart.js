@@ -1,11 +1,18 @@
 import CartImage from "./CartPageImage.jpg";
 import CartItem from "../../components/CartItem/CartItem";
 import Button from "../../components/Button/Button";
+import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
+import {
+	cartIncreaseQty,
+	cartDecreaseQty,
+	cartRemove,
+} from "../../store/actions/cart";
 import "./Cart.css";
 
 export default function Cart() {
 	const { cartItems } = useSelector((state) => state.cart);
+	const dispatch = useDispatch();
 	const totalPrice =
 		cartItems.length > 0
 			? cartItems
@@ -15,7 +22,19 @@ export default function Cart() {
 					)
 					.toFixed(2)
 			: 0;
-
+	const increaseQty = (id) => {
+		dispatch(cartIncreaseQty(id, 1));
+	};
+	const removeItem = (id) => {
+		dispatch(cartRemove(id));
+	};
+	const decreaseQty = (item) => {
+		if (item.qty <= 1) {
+			removeItem(item.product.id);
+		} else {
+			dispatch(cartDecreaseQty(item.product.id, 1));
+		}
+	};
 	return (
 		<div className="Cart">
 			<div className="Cart-content">
@@ -26,7 +45,10 @@ export default function Cart() {
 							key={item.product.id}
 							{...item.product}
 							qty={item.qty}
-						></CartItem>
+							add={() => increaseQty(item.product.id)}
+							remove={() => removeItem(item.product.id)}
+							subtract={() => decreaseQty(item)}
+						/>
 					))}
 				</div>
 				<div className="Cart-summary">

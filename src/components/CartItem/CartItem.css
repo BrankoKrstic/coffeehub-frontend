@@ -33,6 +33,12 @@
 .CartItem-buttons {
 	display: flex;
 	flex-direction: column;
+	justify-content: space-between;
 	align-items: flex-end;
 	width: 50%;
+	margin: 1rem;
+}
+
+.CartItem-totalprice {
+	text-align: right;
 }

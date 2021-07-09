@@ -1,8 +1,10 @@
+import CartItemControls from "./CartItemControls/CartItemControls";
 import Button from "../Button/Button";
 import "./CartItem.css";
 
 export default function CartItem(props) {
-	const { price, qty, name, id, image, description } = props;
+	const { price, qty, name, id, remove, add, subtract, image, description } =
+		props;
 	return (
 		<div className="CartItem">
 			<div className="CartItem-image">
@@ -20,7 +22,13 @@ export default function CartItem(props) {
 				</p>
 			</div>
 			<div className="CartItem-buttons">
-				<Button remove>x</Button>
+				<Button clicked={remove} remove>
+					x
+				</Button>
+				<CartItemControls qty={qty} add={add} subtract={subtract} />
+				<div className="CartItem-totalprice">
+					Total price: ${(price * qty).toFixed(2)}
+				</div>
 			</div>
 		</div>
 	);
