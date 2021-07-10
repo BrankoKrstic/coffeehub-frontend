@@ -10,10 +10,45 @@
 	height: 100%;
 	background-color: #fff;
 	border-right: 1px solid #ddd;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 .Payment-right {
 	width: 50%;
 	height: 100%;
 	background-color: #eee;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.Payment-summary {
+	width: 50%;
+	height: 50%;
+	background-color: #fff;
+	border-radius: 2rem;
+	padding: 1rem;
+	overflow-y: scroll;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.Payment-summary p {
+	text-align: right;
+	font-weight: bold;
+}
+
+.Payment-item {
+	height: 5rem;
+	border-bottom: 1px solid #ccc;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+}
+
+.Payment-total {
+	border-top: 1px solid #333;
 }

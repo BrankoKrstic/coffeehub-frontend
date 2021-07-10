@@ -1,0 +1,9 @@
+.StripePayment {
+	text-align: center;
+	width: 50%;
+}
+
+.StripePayment h1 {
+	color: #333;
+	margin-bottom: 2rem;
+}

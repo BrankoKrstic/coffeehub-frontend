@@ -1,0 +1,10 @@
+.FormGroup {
+	padding: 1rem;
+	border: 1px solid #ccc;
+	border-radius: 1rem;
+	margin-bottom: 2rem;
+}
+
+.FormGroup:hover {
+	border-color: cyan;
+}
