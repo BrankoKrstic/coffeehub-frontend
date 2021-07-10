@@ -10,3 +10,6 @@ export const CART_DECREASE_QTY = "CART_DECREASE_QTY";
 export const CART_PURGE = "CART_PURGE";
 
 export const SET_SHIPPING = "SET_SHIPPING";
+
+export const AUTH_LOGIN = "AUTH_LOGIN";
+export const AUTH_LOGOUT = "AUTH_LOGOUT";

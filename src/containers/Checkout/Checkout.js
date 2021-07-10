@@ -42,7 +42,7 @@ export default function Checkout() {
 						name="name"
 						id="name"
 						placeholder="Your name"
-						onChange={updateForm}
+						updateForm={updateForm}
 						required
 					/>
 					<label htmlFor="email">Email</label>
@@ -51,7 +51,7 @@ export default function Checkout() {
 						name="email"
 						id="email"
 						placeholder="Your email"
-						onChange={updateForm}
+						updateForm={updateForm}
 						required
 					/>
 					<label htmlFor="phone">Phone Number</label>
@@ -60,7 +60,7 @@ export default function Checkout() {
 						name="phone"
 						id="phone"
 						placeholder="Your phone number"
-						onChange={updateForm}
+						updateForm={updateForm}
 						required
 					/>
 					<label htmlFor="address">Address</label>
@@ -69,7 +69,7 @@ export default function Checkout() {
 						name="address"
 						id="address"
 						placeholder="Your address"
-						onChange={updateForm}
+						updateForm={updateForm}
 						required
 					/>
 					<label htmlFor="city">City</label>
@@ -78,7 +78,7 @@ export default function Checkout() {
 						name="city"
 						id="city"
 						placeholder="Your city"
-						onChange={updateForm}
+						updateForm={updateForm}
 						required
 					/>
 					<label htmlFor="postalcode">Postal Code</label>
@@ -87,7 +87,7 @@ export default function Checkout() {
 						name="postalcode"
 						id="postalcode"
 						placeholder="Postal code"
-						onChange={updateForm}
+						updateForm={updateForm}
 						required
 					/>
 					<label htmlFor="country">Country</label>
@@ -96,7 +96,7 @@ export default function Checkout() {
 						name="country"
 						id="country"
 						placeholder="Your country"
-						onChange={updateForm}
+						updateForm={updateForm}
 						required
 					/>
 					<Button secondary type="submit">

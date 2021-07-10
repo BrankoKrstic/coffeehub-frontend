@@ -6,4 +6,16 @@
 	outline: none;
 	background-color: #ddd;
 	font-size: 1.3rem;
+	border: 1px solid transparent;
+	box-sizing: border-box;
+}
+
+.Input:hover,
+.Input:active {
+	border-color: rgb(112, 191, 255);
+}
+
+.Input:focus {
+	border-color: rgb(0, 140, 255);
+	background-color: rgb(199, 229, 253);
 }
