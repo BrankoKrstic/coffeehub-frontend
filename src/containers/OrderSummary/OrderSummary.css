@@ -1,0 +1,77 @@
+.OrderSummary {
+	width: 100vw;
+	height: calc(100vh - 4.5rem);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.OrderSummary h1 {
+	color: #333;
+	font-size: 2.5rem;
+}
+
+.OrderSummary-content {
+	height: 90%;
+	width: 95%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.OrderSummary-orders {
+	width: 40%;
+	height: 100%;
+	border-radius: 1rem;
+	background: #eee;
+	overflow-y: auto;
+}
+
+.OrderSummary-orders h2 {
+	text-align: center;
+	padding: 1rem;
+	border-bottom: 1px solid #999;
+}
+
+.OrderSummary-item {
+	height: 6rem;
+	padding: 0.5rem;
+	border-bottom: 1px solid #ccc;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: flex-end;
+}
+
+.OrderSummary-item {
+	text-align: right;
+}
+
+.OrderSummary-data {
+	height: 100%;
+	width: 58%;
+	border-radius: 1rem;
+	background: #eee;
+	font-weight: bold;
+}
+
+.OrderSummary-data div {
+	height: 25%;
+	border-bottom: 1px solid #fff;
+	display: flex;
+	align-items: flex-end;
+	justify-content: flex-end;
+}
+
+.OrderSummary-data div p {
+	margin: 1rem;
+}
+
+.Paid {
+	background-color: rgb(153, 192, 153);
+}
+
+.NotPaid {
+	background-color: rgb(216, 113, 113);
+}

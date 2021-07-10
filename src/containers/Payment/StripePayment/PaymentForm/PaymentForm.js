@@ -79,23 +79,30 @@ export default function PaymentForm() {
 	return (
 		<>
 			{payState.loading && <Loader />}
-			{!payState.success ? (
-				<form
-					className={payState.loading && "Form-nodisplay"}
-					onSubmit={handleSubmit}
-				>
-					<fieldset className="FormGroup">
-						<CardElement options={CARD_OPTIONS} />
-					</fieldset>
-					<Button type="submit" secondary>
-						Pay
-					</Button>
-				</form>
-			) : (
+			{payState.success && (
 				<div>
 					<h2>Success!</h2>
 				</div>
 			)}
+			{payState.fail && (
+				<div>
+					<h2>Error submitting order</h2>
+				</div>
+			)}
+			<form
+				className={
+					(payState.loading || payState.success || payState.fail) &&
+					"Form-nodisplay"
+				}
+				onSubmit={handleSubmit}
+			>
+				<fieldset className="FormGroup">
+					<CardElement options={CARD_OPTIONS} />
+				</fieldset>
+				<Button type="submit" secondary>
+					Pay
+				</Button>
+			</form>
 		</>
 	);
 }

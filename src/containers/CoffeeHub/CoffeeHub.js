@@ -32,7 +32,8 @@ export default function CoffeeHub() {
 					<Route path="/payment">
 						<Payment />
 					</Route>
-					<Route path="/order/:id">
+					<Route path="/orders/:id">
+						<Navbar />
 						<OrderSummary />
 					</Route>
 					<Route path="/">
