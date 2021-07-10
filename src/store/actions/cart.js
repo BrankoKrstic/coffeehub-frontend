@@ -37,3 +37,9 @@ export const setShippingDetails = (data) => {
 		data,
 	};
 };
+
+export const cartPurge = () => {
+	return {
+		type: actionTypes.CART_PURGE,
+	};
+};

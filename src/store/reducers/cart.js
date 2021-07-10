@@ -52,6 +52,10 @@ const reducer = (state = initialState, action) => {
 				...state,
 				shipping: action.data,
 			};
+		case actionTypes.CART_PURGE:
+			return {
+				...initialState,
+			};
 		default:
 			return state;
 	}

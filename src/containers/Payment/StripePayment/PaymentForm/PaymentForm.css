@@ -8,3 +8,7 @@
 .FormGroup:hover {
 	border-color: cyan;
 }
+
+.Form-nodisplay {
+	display: none;
+}

@@ -1,9 +1,12 @@
 import { useState } from "react";
 import { CardElement, useElements, useStripe } from "@stripe/react-stripe-js";
+import { useHistory } from "react-router";
 import axios from "../../../../axios-orders";
 import Button from "../../../../components/Button/Button";
+import Loader from "../../../../components/UI/Loader/Loader";
 import "./PaymentForm.css";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+import { cartPurge } from "../../../../store/actions/cart";
 import calcTotalCost from "../../../../helpers/calcTotalCost";
 
 const CARD_OPTIONS = {
@@ -28,22 +31,32 @@ const CARD_OPTIONS = {
 };
 
 export default function PaymentForm() {
-	const [success, setSuccess] = useState(false);
+	const [payState, setPayState] = useState({
+		success: false,
+		loading: false,
+		fail: false,
+	});
 	const stripe = useStripe();
 	const elements = useElements();
+	const dispatch = useDispatch();
+	const history = useHistory();
 	const { cartItems, shipping } = useSelector((state) => state.cart);
 	const totalPrice = calcTotalCost(cartItems);
 
 	const handleSubmit = async (e) => {
 		e.preventDefault();
+		setPayState({
+			success: false,
+			loading: true,
+			fail: false,
+		});
 		const { error, paymentMethod } = await stripe.createPaymentMethod({
 			type: "card",
 			card: elements.getElement(CardElement),
 		});
-		console.log(paymentMethod);
 		if (!error) {
 			try {
-				const response = await axios.post("/payment", {
+				const response = await axios.post("/orders/payment", {
 					totalPrice: totalPrice,
 					paymentMethod,
 					items: cartItems,
@@ -51,20 +64,26 @@ export default function PaymentForm() {
 				});
 				if (response.data.success) {
 					console.log("Successful payment");
-					setSuccess(true);
+					setPayState({ loading: false, fail: false, success: true });
+					dispatch(cartPurge());
+					history.push(`/orders/${response.data.id}`);
 				}
 			} catch (err) {
+				setPayState({ loading: false, success: false, fail: true });
 				console.log("Error", err);
 			}
 		} else {
 			console.log(error.message);
 		}
 	};
-
 	return (
 		<>
-			{!success ? (
-				<form onSubmit={handleSubmit}>
+			{payState.loading && <Loader />}
+			{!payState.success ? (
+				<form
+					className={payState.loading && "Form-nodisplay"}
+					onSubmit={handleSubmit}
+				>
 					<fieldset className="FormGroup">
 						<CardElement options={CARD_OPTIONS} />
 					</fieldset>

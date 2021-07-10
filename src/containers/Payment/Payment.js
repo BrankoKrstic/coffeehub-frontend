@@ -27,7 +27,10 @@ export default function Payment() {
 										{item.product.name} x {item.qty}
 									</p>
 									<p>
-										Cost: ${item.product.price * item.qty}
+										Cost: $
+										{(
+											item.product.price * item.qty
+										).toFixed(2)}
 									</p>
 								</div>
 							))}
