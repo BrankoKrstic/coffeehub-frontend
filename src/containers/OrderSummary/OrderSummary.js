@@ -12,7 +12,9 @@ export default function OrderSummary() {
 	});
 	const { id } = useParams();
 	useEffect(() => {
-		setOrderState({ ...orderState, loading: true });
+		setOrderState((orderState) => {
+			return { ...orderState, loading: true };
+		});
 		axios
 			.get(`/orders/${id}`)
 			.then((res) =>
@@ -25,7 +27,7 @@ export default function OrderSummary() {
 			.catch((err) =>
 				setOrderState({ order: null, loading: false, error: true })
 			);
-	}, []);
+	}, [id]);
 	const orderData = () => {
 		if (orderState.order) {
 			return (

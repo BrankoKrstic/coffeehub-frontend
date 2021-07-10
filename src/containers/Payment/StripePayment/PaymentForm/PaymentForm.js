@@ -91,8 +91,9 @@ export default function PaymentForm() {
 			)}
 			<form
 				className={
-					(payState.loading || payState.success || payState.fail) &&
-					"Form-nodisplay"
+					payState.loading || payState.success || payState.fail
+						? "Form-nodisplay"
+						: undefined
 				}
 				onSubmit={handleSubmit}
 			>
