@@ -1,9 +1,20 @@
+import { useState } from "react";
 import { useSelector } from "react-redux";
 import { Redirect } from "react-router";
 import Button from "../../components/Button/Button";
 import "./Checkout.css";
 
 export default function Checkout() {
+	const [formState, setFormState] = useState({
+		name: "",
+		address: "",
+		city: "",
+		postalcode: "",
+		country: "",
+	});
+	const updateForm = (e) => {
+		setFormState({ ...formState, [e.target.name]: e.target.value });
+	};
 	const { cartItems } = useSelector((state) => state.cart);
 	const handleSubmit = (e) => {
 		e.preventDefault();
@@ -20,6 +31,7 @@ export default function Checkout() {
 						name="name"
 						id="name"
 						placeholder="Your name"
+						onChange={updateForm}
 						required
 					/>
 					<label htmlFor="address">Address</label>
@@ -28,6 +40,7 @@ export default function Checkout() {
 						name="address"
 						id="address"
 						placeholder="Your address"
+						onChange={updateForm}
 						required
 					/>
 					<label htmlFor="city">City</label>
@@ -36,6 +49,7 @@ export default function Checkout() {
 						name="city"
 						id="city"
 						placeholder="Your city"
+						onChange={updateForm}
 						required
 					/>
 					<label htmlFor="postalcode">Postal Code</label>
@@ -44,6 +58,7 @@ export default function Checkout() {
 						name="postalcode"
 						id="postalcode"
 						placeholder="Postal code"
+						onChange={updateForm}
 						required
 					/>
 					<label htmlFor="country">Country</label>
@@ -52,6 +67,7 @@ export default function Checkout() {
 						name="country"
 						id="country"
 						placeholder="Your country"
+						onChange={updateForm}
 						required
 					/>
 					<Button secondary type="submit">

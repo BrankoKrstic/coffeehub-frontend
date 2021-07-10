@@ -16,14 +16,14 @@ const reducer = (state = initialState, action) => {
 			return {
 				...state,
 				cartItems: state.cartItems.filter(
-					(item) => item.product.id !== action.id
+					(item) => item.product._id !== action._id
 				),
 			};
 		case actionTypes.CART_INCREASE_QTY:
 			return {
 				...state,
 				cartItems: state.cartItems.map((item) => {
-					if (item.product.id === action.id) {
+					if (item.product._id === action._id) {
 						return {
 							product: item.product,
 							qty: item.qty + action.qty,
@@ -37,7 +37,7 @@ const reducer = (state = initialState, action) => {
 			return {
 				...state,
 				cartItems: state.cartItems.map((item) => {
-					if (item.product.id === action.id) {
+					if (item.product._id === action._id) {
 						return {
 							product: item.product,
 							qty: item.qty - action.qty,

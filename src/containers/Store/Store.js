@@ -14,8 +14,8 @@ export default function Store() {
 		dispatch(initProducts());
 	}, []);
 	const addItem = (product, qty) => {
-		if (cartItems.find((item) => item.product.id === product.id)) {
-			dispatch(cartIncreaseQty(product.id, qty));
+		if (cartItems.find((item) => item.product._id === product._id)) {
+			dispatch(cartIncreaseQty(product._id, qty));
 		} else {
 			dispatch(cartAdd(product, qty));
 		}

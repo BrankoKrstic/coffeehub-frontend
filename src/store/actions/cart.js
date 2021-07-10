@@ -8,25 +8,25 @@ export const cartAdd = (product, qty) => {
 	};
 };
 
-export const cartRemove = (id) => {
+export const cartRemove = (_id) => {
 	return {
 		type: actionTypes.CART_REMOVE,
-		id,
+		_id,
 	};
 };
 
-export const cartIncreaseQty = (id, qty) => {
+export const cartIncreaseQty = (_id, qty) => {
 	return {
 		type: actionTypes.CART_INCREASE_QTY,
-		id,
+		_id,
 		qty,
 	};
 };
 
-export const cartDecreaseQty = (id, qty) => {
+export const cartDecreaseQty = (_id, qty) => {
 	return {
 		type: actionTypes.CART_DECREASE_QTY,
-		id,
+		_id,
 		qty,
 	};
 };

@@ -22,17 +22,17 @@ export default function Cart() {
 					)
 					.toFixed(2)
 			: 0;
-	const increaseQty = (id) => {
-		dispatch(cartIncreaseQty(id, 1));
+	const increaseQty = (_id) => {
+		dispatch(cartIncreaseQty(_id, 1));
 	};
-	const removeItem = (id) => {
-		dispatch(cartRemove(id));
+	const removeItem = (_id) => {
+		dispatch(cartRemove(_id));
 	};
 	const decreaseQty = (item) => {
 		if (item.qty <= 1) {
-			removeItem(item.product.id);
+			removeItem(item.product._id);
 		} else {
-			dispatch(cartDecreaseQty(item.product.id, 1));
+			dispatch(cartDecreaseQty(item.product._id, 1));
 		}
 	};
 	return (
@@ -42,11 +42,11 @@ export default function Cart() {
 				<div className="Cart-item-container">
 					{cartItems.map((item) => (
 						<CartItem
-							key={item.product.id}
+							key={item.product._id}
 							{...item.product}
 							qty={item.qty}
-							add={() => increaseQty(item.product.id)}
-							remove={() => removeItem(item.product.id)}
+							add={() => increaseQty(item.product._id)}
+							remove={() => removeItem(item.product._id)}
 							subtract={() => decreaseQty(item)}
 						/>
 					))}
