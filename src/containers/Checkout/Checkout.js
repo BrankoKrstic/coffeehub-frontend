@@ -4,6 +4,7 @@ import { useHistory } from "react-router-dom";
 import { setShippingDetails } from "../../store/actions/cart";
 import { Redirect } from "react-router";
 import Button from "../../components/Button/Button";
+import Input from "../../components/Input/Input";
 import "./Checkout.css";
 
 export default function Checkout() {
@@ -36,7 +37,7 @@ export default function Checkout() {
 				<form className="Checkout-form" onSubmit={handleSubmit}>
 					<h2>Details</h2>
 					<label htmlFor="name">Full Name</label>
-					<input
+					<Input
 						type="text"
 						name="name"
 						id="name"
@@ -45,7 +46,7 @@ export default function Checkout() {
 						required
 					/>
 					<label htmlFor="email">Email</label>
-					<input
+					<Input
 						type="email"
 						name="email"
 						id="email"
@@ -54,7 +55,7 @@ export default function Checkout() {
 						required
 					/>
 					<label htmlFor="phone">Phone Number</label>
-					<input
+					<Input
 						type="text"
 						name="phone"
 						id="phone"
@@ -63,7 +64,7 @@ export default function Checkout() {
 						required
 					/>
 					<label htmlFor="address">Address</label>
-					<input
+					<Input
 						type="text"
 						name="address"
 						id="address"
@@ -72,7 +73,7 @@ export default function Checkout() {
 						required
 					/>
 					<label htmlFor="city">City</label>
-					<input
+					<Input
 						type="text"
 						name="city"
 						id="city"
@@ -81,7 +82,7 @@ export default function Checkout() {
 						required
 					/>
 					<label htmlFor="postalcode">Postal Code</label>
-					<input
+					<Input
 						type="text"
 						name="postalcode"
 						id="postalcode"
@@ -90,7 +91,7 @@ export default function Checkout() {
 						required
 					/>
 					<label htmlFor="country">Country</label>
-					<input
+					<Input
 						type="text"
 						name="country"
 						id="country"
