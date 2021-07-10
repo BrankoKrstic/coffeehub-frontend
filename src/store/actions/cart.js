@@ -30,3 +30,10 @@ export const cartDecreaseQty = (_id, qty) => {
 		qty,
 	};
 };
+
+export const setShippingDetails = (data) => {
+	return {
+		type: actionTypes.SET_SHIPPING,
+		data,
+	};
+};

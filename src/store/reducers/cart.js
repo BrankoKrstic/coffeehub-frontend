@@ -1,6 +1,6 @@
 import * as actionTypes from "../actions/actionTypes";
 
-const initialState = { cartItems: [] };
+const initialState = { cartItems: [], shipping: {} };
 
 const reducer = (state = initialState, action) => {
 	switch (action.type) {
@@ -46,6 +46,11 @@ const reducer = (state = initialState, action) => {
 						return item;
 					}
 				}),
+			};
+		case actionTypes.SET_SHIPPING:
+			return {
+				...state,
+				shipping: action.data,
 			};
 		default:
 			return state;

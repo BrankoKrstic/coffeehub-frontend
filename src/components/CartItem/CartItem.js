@@ -3,7 +3,7 @@ import Button from "../Button/Button";
 import "./CartItem.css";
 
 export default function CartItem(props) {
-	const { price, qty, name, id, remove, add, subtract, image, description } =
+	const { price, qty, name, remove, add, subtract, image, description } =
 		props;
 	return (
 		<div className="CartItem">

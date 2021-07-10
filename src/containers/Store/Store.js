@@ -12,7 +12,7 @@ export default function Store() {
 	const dispatch = useDispatch();
 	useEffect(() => {
 		dispatch(initProducts());
-	}, []);
+	}, [dispatch]);
 	const addItem = (product, qty) => {
 		if (cartItems.find((item) => item.product._id === product._id)) {
 			dispatch(cartIncreaseQty(product._id, qty));

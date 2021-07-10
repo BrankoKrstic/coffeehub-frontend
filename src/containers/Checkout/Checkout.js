@@ -1,23 +1,31 @@
 import { useState } from "react";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+import { useHistory } from "react-router-dom";
+import { setShippingDetails } from "../../store/actions/cart";
 import { Redirect } from "react-router";
 import Button from "../../components/Button/Button";
 import "./Checkout.css";
 
 export default function Checkout() {
-	const [formState, setFormState] = useState({
+	const dispatch = useDispatch();
+	const history = useHistory();
+	const defaultFormState = {
 		name: "",
 		address: "",
 		city: "",
 		postalcode: "",
 		country: "",
-	});
+	};
+	const [formState, setFormState] = useState(defaultFormState);
 	const updateForm = (e) => {
 		setFormState({ ...formState, [e.target.name]: e.target.value });
 	};
 	const { cartItems } = useSelector((state) => state.cart);
 	const handleSubmit = (e) => {
 		e.preventDefault();
+		dispatch(setShippingDetails(formState));
+		setFormState(defaultFormState);
+		history.push("/payment");
 	};
 	return (
 		<>
