@@ -6,6 +6,7 @@ import About from "../../components/About/About";
 import Cart from "../Cart/Cart";
 import Checkout from "../Checkout/Checkout";
 import Payment from "../Payment/Payment";
+import OrderSummary from "../OrderSummary/OrderSummary";
 import "./CoffeeHub.css";
 
 export default function CoffeeHub() {
@@ -30,6 +31,9 @@ export default function CoffeeHub() {
 					</Route>
 					<Route path="/payment">
 						<Payment />
+					</Route>
+					<Route path="/order/:id">
+						<OrderSummary />
 					</Route>
 					<Route path="/">
 						<HomePage />

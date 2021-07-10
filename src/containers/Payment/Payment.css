@@ -1,0 +1,19 @@
+.Payment {
+	height: 100vh;
+	width: 100vw;
+	overflow: hidden;
+	display: flex;
+}
+
+.Payment-left {
+	width: 50%;
+	height: 100%;
+	background-color: #fff;
+	border-right: 1px solid #ddd;
+}
+
+.Payment-right {
+	width: 50%;
+	height: 100%;
+	background-color: #eee;
+}

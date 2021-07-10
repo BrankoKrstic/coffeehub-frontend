@@ -11,6 +11,8 @@ export default function Checkout() {
 	const history = useHistory();
 	const defaultFormState = {
 		name: "",
+		email: "",
+		phone: "",
 		address: "",
 		city: "",
 		postalcode: "",
@@ -32,13 +34,31 @@ export default function Checkout() {
 			{cartItems.length === 0 && <Redirect to="/store" />}
 			<div className="Checkout">
 				<form className="Checkout-form" onSubmit={handleSubmit}>
-					<h2>Shipping Details</h2>
+					<h2>Details</h2>
 					<label htmlFor="name">Full Name</label>
 					<input
 						type="text"
 						name="name"
 						id="name"
 						placeholder="Your name"
+						onChange={updateForm}
+						required
+					/>
+					<label htmlFor="email">Email</label>
+					<input
+						type="email"
+						name="email"
+						id="email"
+						placeholder="Your email"
+						onChange={updateForm}
+						required
+					/>
+					<label htmlFor="phone">Phone Number</label>
+					<input
+						type="text"
+						name="phone"
+						id="phone"
+						placeholder="Your phone number"
 						onChange={updateForm}
 						required
 					/>
