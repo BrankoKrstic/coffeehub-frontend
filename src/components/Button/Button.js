@@ -7,6 +7,7 @@ export default function Button(props) {
 				props.secondary && "Secondary"
 			} ${props.remove && "Remove"}`}
 			onClick={props.clicked}
+			type={props.type}
 		>
 			{props.children}
 		</button>

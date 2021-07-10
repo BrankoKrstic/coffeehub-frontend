@@ -18,8 +18,9 @@
 }
 
 .Secondary {
-	padding: 1rem 3rem;
+	padding: 1.5rem 3rem;
 	font-size: 1.1rem;
+	margin: 0 1rem;
 	letter-spacing: 1px;
 	font-weight: bold;
 	border-radius: 1rem;
