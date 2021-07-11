@@ -11,15 +11,21 @@ import Payment from "../Payment/Payment";
 import OrderSummary from "../OrderSummary/OrderSummary";
 import Login from "../../components/Login/Login";
 import { signIn } from "../../store/actions/auth";
+import { cartSetItems } from "../../store/actions/cart";
 import "./CoffeeHub.css";
 
 export default function CoffeeHub() {
 	const dispatch = useDispatch();
 	useEffect(() => {
-		const data = window.localStorage.getItem("coffehubAuthData");
-		if (data) {
-			const authDetails = JSON.parse(data);
+		const authData = window.localStorage.getItem("coffehubAuthData");
+		if (authData) {
+			const authDetails = JSON.parse(authData);
 			dispatch(signIn(authDetails));
+		}
+		const cartData = window.localStorage.getItem("coffeehubCartData");
+		if (cartData) {
+			const cartDetails = JSON.parse(cartData);
+			dispatch(cartSetItems(cartDetails));
 		}
 	}, []);
 	return (

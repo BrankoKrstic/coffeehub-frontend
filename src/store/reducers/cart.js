@@ -52,6 +52,11 @@ const reducer = (state = initialState, action) => {
 				...state,
 				shipping: action.data,
 			};
+		case actionTypes.CART_SET_ITEMS:
+			return {
+				...state,
+				cartItems: action.cartItems,
+			};
 		case actionTypes.CART_PURGE:
 			return {
 				...initialState,

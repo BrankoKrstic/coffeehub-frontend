@@ -8,6 +8,7 @@ export const CART_REMOVE = "CART_REMOVE";
 export const CART_INCREASE_QTY = "CART_INCREASE_QTY";
 export const CART_DECREASE_QTY = "CART_DECREASE_QTY";
 export const CART_PURGE = "CART_PURGE";
+export const CART_SET_ITEMS = "CART_SET_ITEMS";
 
 export const SET_SHIPPING = "SET_SHIPPING";
 

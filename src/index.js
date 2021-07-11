@@ -23,6 +23,13 @@ const store = createStore(
 	composeEnhancers(applyMiddleware(thunk))
 );
 
+store.subscribe(() => {
+	window.localStorage.setItem(
+		"coffeehubCartData",
+		JSON.stringify(store.getState().cart.cartItems)
+	);
+});
+
 ReactDOM.render(
 	<React.StrictMode>
 		<Provider store={store}>

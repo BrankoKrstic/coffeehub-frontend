@@ -31,6 +31,13 @@ export const cartDecreaseQty = (_id, qty) => {
 	};
 };
 
+export const cartSetItems = (cartItems) => {
+	return {
+		type: actionTypes.CART_SET_ITEMS,
+		cartItems,
+	};
+};
+
 export const setShippingDetails = (data) => {
 	return {
 		type: actionTypes.SET_SHIPPING,
