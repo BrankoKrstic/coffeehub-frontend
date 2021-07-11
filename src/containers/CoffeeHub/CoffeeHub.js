@@ -1,3 +1,5 @@
+import { useEffect } from "react";
+import { useDispatch } from "react-redux";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Navbar from "../../components/Navigation/Navbar/Navbar";
 import Store from "../Store/Store";
@@ -8,9 +10,18 @@ import Checkout from "../Checkout/Checkout";
 import Payment from "../Payment/Payment";
 import OrderSummary from "../OrderSummary/OrderSummary";
 import Login from "../../components/Login/Login";
+import { signIn } from "../../store/actions/auth";
 import "./CoffeeHub.css";
 
 export default function CoffeeHub() {
+	const dispatch = useDispatch();
+	useEffect(() => {
+		const data = window.localStorage.getItem("coffehubAuthData");
+		if (data) {
+			const authDetails = JSON.parse(data);
+			dispatch(signIn(authDetails));
+		}
+	}, []);
 	return (
 		<Router>
 			<main className="CoffeeHub">

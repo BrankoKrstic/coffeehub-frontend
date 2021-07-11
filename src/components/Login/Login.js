@@ -21,6 +21,10 @@ export default function Login() {
 			})
 			.then((res) => {
 				dispatch(signIn(res.data));
+				window.localStorage.setItem(
+					"coffehubAuthData",
+					JSON.stringify(res.data)
+				);
 			})
 			.catch((err) => console.log(err));
 
