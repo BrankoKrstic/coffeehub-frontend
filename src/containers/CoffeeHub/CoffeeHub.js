@@ -20,7 +20,13 @@ export default function CoffeeHub() {
 		const authData = window.localStorage.getItem("coffehubAuthData");
 		if (authData) {
 			const authDetails = JSON.parse(authData);
-			dispatch(signIn(authDetails));
+			console.log(authDetails);
+			if (authDetails.expirationTime < Date.now()) {
+				console.log(authDetails);
+				dispatch(signIn(authDetails));
+			} else {
+				window.localStorage.removeItem("coffeehubAuthData");
+			}
 		}
 		const cartData = window.localStorage.getItem("coffeehubCartData");
 		if (cartData) {

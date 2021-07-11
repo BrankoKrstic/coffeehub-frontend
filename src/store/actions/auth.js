@@ -8,6 +8,7 @@ export const signIn = (userData) => {
 		email: userData.email,
 		isAdmin: userData.isAdmin,
 		token: userData.token,
+		expirationTime: userData.expirationTime,
 	};
 };
 

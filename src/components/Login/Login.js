@@ -20,10 +20,12 @@ export default function Login() {
 				password: password,
 			})
 			.then((res) => {
-				dispatch(signIn(res.data));
+				const authData = res.data;
+				authData.expirationTime = Date.now() + 30 * 24 * 60 * 60 * 1000;
+				dispatch(signIn(authData));
 				window.localStorage.setItem(
 					"coffehubAuthData",
-					JSON.stringify(res.data)
+					JSON.stringify(authData)
 				);
 			})
 			.catch((err) => console.log(err));

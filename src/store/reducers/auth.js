@@ -17,6 +17,7 @@ const reducer = (state = initialState, action) => {
 				id: action.id,
 				isAdmin: action.isAdmin,
 				token: action.token,
+				expirationTime: action.expirationTime,
 			};
 		default:
 			return state;
