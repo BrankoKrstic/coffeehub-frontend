@@ -20,7 +20,6 @@ export default function CoffeeHub() {
 		const authData = window.localStorage.getItem("coffeehubAuthData");
 		if (authData) {
 			const authDetails = JSON.parse(authData);
-			console.log(authDetails);
 			if (authDetails.expirationTime > Date.now()) {
 				dispatch(signIn(authDetails));
 			} else {

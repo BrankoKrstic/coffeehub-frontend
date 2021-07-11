@@ -11,8 +11,7 @@ export default function Navbar() {
 	const history = useHistory();
 	const { isAdmin } = useSelector((state) => state.auth);
 	const logout = () => {
-		window.localStorage.removeItem("coffeehubAuthData");
-		dispatch(signOut);
+		dispatch(signOut());
 		history.push("/");
 	};
 	return (
@@ -21,18 +20,6 @@ export default function Navbar() {
 				CoffeeHub
 			</NavLink>
 			<div className="Navbar-link-container">
-				{isAdmin && (
-					<>
-						<NavLink
-							className="Navbar-link"
-							to="/orders"
-							activeClassName="current"
-						>
-							Orders
-						</NavLink>
-						<button onClick={logout}>Logout</button>
-					</>
-				)}
 				<NavLink
 					className="Navbar-link"
 					to="/store"
@@ -47,6 +34,18 @@ export default function Navbar() {
 				>
 					About Us{/*  TODO: IMAGE PARTIALLY ACROSS SCREEN */}
 				</NavLink>
+				{isAdmin && (
+					<>
+						<NavLink
+							className="Navbar-link"
+							to="/orders"
+							activeClassName="current"
+						>
+							Orders
+						</NavLink>
+						<button onClick={logout}>Logout</button>
+					</>
+				)}
 				<NavLink
 					className="Navbar-link"
 					to="/cart"

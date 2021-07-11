@@ -6,6 +6,7 @@ const initialState = {
 	id: null,
 	token: null,
 	isAdmin: null,
+	expirationTime: null,
 };
 
 const reducer = (state = initialState, action) => {
@@ -18,6 +19,15 @@ const reducer = (state = initialState, action) => {
 				isAdmin: action.isAdmin,
 				token: action.token,
 				expirationTime: action.expirationTime,
+			};
+		case actionTypes.AUTH_LOGOUT:
+			return {
+				username: null,
+				email: null,
+				id: null,
+				isAdmin: null,
+				token: null,
+				expirationTime: null,
 			};
 		default:
 			return state;

@@ -13,6 +13,7 @@ export const signIn = (userData) => {
 };
 
 export const signOut = () => {
+	window.localStorage.removeItem("coffeehubAuthData");
 	return {
 		type: actionTypes.AUTH_LOGOUT,
 	};
