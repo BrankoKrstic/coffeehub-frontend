@@ -17,12 +17,11 @@ import "./CoffeeHub.css";
 export default function CoffeeHub() {
 	const dispatch = useDispatch();
 	useEffect(() => {
-		const authData = window.localStorage.getItem("coffehubAuthData");
+		const authData = window.localStorage.getItem("coffeehubAuthData");
 		if (authData) {
 			const authDetails = JSON.parse(authData);
 			console.log(authDetails);
-			if (authDetails.expirationTime < Date.now()) {
-				console.log(authDetails);
+			if (authDetails.expirationTime > Date.now()) {
 				dispatch(signIn(authDetails));
 			} else {
 				window.localStorage.removeItem("coffeehubAuthData");

@@ -24,7 +24,7 @@ export default function Login() {
 				authData.expirationTime = Date.now() + 30 * 24 * 60 * 60 * 1000;
 				dispatch(signIn(authData));
 				window.localStorage.setItem(
-					"coffehubAuthData",
+					"coffeehubAuthData",
 					JSON.stringify(authData)
 				);
 			})

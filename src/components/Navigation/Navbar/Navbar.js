@@ -2,10 +2,19 @@ import { NavLink } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 import "./Navbar.css";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+import { useHistory } from "react-router-dom";
+import { signOut } from "../../../store/actions/auth";
 
 export default function Navbar() {
+	const dispatch = useDispatch();
+	const history = useHistory();
 	const { isAdmin } = useSelector((state) => state.auth);
+	const logout = () => {
+		window.localStorage.removeItem("coffeehubAuthData");
+		dispatch(signOut);
+		history.push("/");
+	};
 	return (
 		<nav className="Navbar">
 			<NavLink to="/" className="Navbar-logo">
@@ -13,13 +22,16 @@ export default function Navbar() {
 			</NavLink>
 			<div className="Navbar-link-container">
 				{isAdmin && (
-					<NavLink
-						className="Navbar-link"
-						to="/orders"
-						activeClassName="current"
-					>
-						Orders
-					</NavLink>
+					<>
+						<NavLink
+							className="Navbar-link"
+							to="/orders"
+							activeClassName="current"
+						>
+							Orders
+						</NavLink>
+						<button onClick={logout}>Logout</button>
+					</>
 				)}
 				<NavLink
 					className="Navbar-link"
