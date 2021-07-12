@@ -10,6 +10,8 @@ export default function Input(props) {
 			placeholder={props.placeholder}
 			onChange={props.updateForm}
 			required={props.required}
+			step={props.step}
+			min={props.min}
 		/>
 	);
 }

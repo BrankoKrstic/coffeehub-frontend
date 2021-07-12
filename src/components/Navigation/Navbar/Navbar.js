@@ -43,6 +43,13 @@ export default function Navbar() {
 						>
 							Orders
 						</NavLink>
+						<NavLink
+							className="Navbar-link"
+							to="/products/add"
+							activeClassName="current"
+						>
+							New Product
+						</NavLink>
 						<button onClick={logout}>Logout</button>
 					</>
 				)}

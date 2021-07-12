@@ -10,6 +10,7 @@ import Checkout from "../Checkout/Checkout";
 import Payment from "../Payment/Payment";
 import OrderSummary from "../OrderSummary/OrderSummary";
 import Orders from "../../components/Orders/Orders";
+import NewProduct from "../NewProduct/NewProduct";
 import Login from "../../components/Login/Login";
 import { signIn } from "../../store/actions/auth";
 import { cartSetItems } from "../../store/actions/cart";
@@ -61,6 +62,10 @@ export default function CoffeeHub() {
 					<Route exact path="/orders">
 						<Navbar />
 						<Orders />
+					</Route>
+					<Route path="/products/add">
+						<Navbar />
+						<NewProduct />
 					</Route>
 					<Route path="/orders/:id">
 						<Navbar />
