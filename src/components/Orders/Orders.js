@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useSelector } from "react-redux";
-import { useHistory } from "react-router-dom";
+import { useHistory, Redirect } from "react-router-dom";
 import OrderItem from "./OrderItem/OrderItem";
 import Loader from "../UI/Loader/Loader";
 import axios from "../../axios-orders";
@@ -54,6 +54,7 @@ export default function Orders() {
 	};
 	return (
 		<div className="Orders">
+			{!token && <Redirect to="/" />}
 			{orderState.loading && <Loader />}
 			{orderState.error && <div>{orderState.error}</div>}
 			{orderState.orders.map((order) => (
