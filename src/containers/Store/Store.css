@@ -28,18 +28,6 @@
 	align-items: flex-start;
 }
 
-.Store-filter-button {
-	width: 100%;
-	text-align: left;
-	outline: none;
-	border: none;
-	color: #333;
-	background-color: transparent;
-	padding: 0.5rem 1rem;
-	font-size: 1rem;
-	cursor: pointer;
-}
-
 .Store-filters h3 {
 	text-transform: uppercase;
 	padding: 1rem;
@@ -49,11 +37,6 @@
 .Store-products {
 	width: 80%;
 }
-
-.Store-filter-active {
-	color: rgb(233, 151, 0);
-}
-
 .Store-products {
 	display: flex;
 	flex-direction: row;
