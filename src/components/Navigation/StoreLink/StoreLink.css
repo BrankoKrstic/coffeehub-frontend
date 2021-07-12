@@ -33,3 +33,9 @@
 .Link-Secondary:hover {
 	background-color: #444;
 }
+
+@media (max-width: 768px) {
+	.Link-Primary {
+		font-size: 1.2rem;
+	}
+}

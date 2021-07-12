@@ -14,7 +14,6 @@
 
 .HomePage-linkcontainer {
 	height: 57%;
-	width: 20%;
 	text-align: center;
 	display: flex;
 	flex-direction: column;
@@ -42,4 +41,14 @@
 
 .HomePage-titlecontainer h1 {
 	font-size: 6rem;
+}
+
+@media (max-width: 768px) {
+	.HomePage-titlecontainer p {
+		font-size: 1.5rem;
+	}
+
+	.HomePage-titlecontainer h1 {
+		font-size: 4rem;
+	}
 }
