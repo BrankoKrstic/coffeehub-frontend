@@ -1,11 +1,13 @@
 import { useState, useEffect } from "react";
 import { useSelector } from "react-redux";
+import { useHistory } from "react-router-dom";
 import OrderItem from "./OrderItem/OrderItem";
 import Loader from "../UI/Loader/Loader";
 import axios from "../../axios-orders";
 import "./Orders.css";
 
 export default function Orders() {
+	const history = useHistory();
 	const [orderState, setOrderState] = useState({
 		orders: [],
 		loading: false,
@@ -43,6 +45,7 @@ export default function Orders() {
 			{orderState.orders.map((order) => (
 				<OrderItem
 					{...order}
+					goToOrder={() => history.push(`/orders/${order._id}`)}
 					key={order._id}
 					toggleComplete={() => toggleComplete(order._id)}
 				/>

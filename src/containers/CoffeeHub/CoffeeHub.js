@@ -58,7 +58,7 @@ export default function CoffeeHub() {
 					<Route path="/auth-admin">
 						<Login />
 					</Route>
-					<Route path="/orders">
+					<Route exact path="/orders">
 						<Navbar />
 						<Orders />
 					</Route>
