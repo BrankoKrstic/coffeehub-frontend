@@ -36,7 +36,21 @@ export default function Orders() {
 		}
 	}, [token]);
 	const toggleComplete = (id) => {
-		axios.put(`/orders/${id}`, { token: token });
+		axios
+			.put(`/orders/${id}`, { token: token })
+			.then((res) =>
+				setOrderState({
+					...orderState,
+					orders: orderState.orders.map((order) => {
+						if (order._id === id) {
+							return { ...order, complete: !order.complete };
+						} else {
+							return { ...order };
+						}
+					}),
+				})
+			)
+			.catch((err) => console.log(err));
 	};
 	return (
 		<div className="Orders">
