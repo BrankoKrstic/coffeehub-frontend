@@ -1,0 +1,20 @@
+.OrderItem {
+	width: 95%;
+	font-size: 1.1rem;
+	margin: 0.5rem 1rem;
+	border-radius: 2rem;
+	height: auto;
+	background-color: rgb(247, 166, 166);
+	border: 1px solid #333;
+	padding: 1rem;
+	display: flex;
+	justify-content: space-between;
+}
+
+.Paid {
+	background-color: rgb(137, 203, 206);
+}
+
+.Complete {
+	background-color: rgb(132, 184, 132);
+}
