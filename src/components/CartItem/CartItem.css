@@ -1,5 +1,5 @@
 .CartItem {
-	width: 100%;
+	width: 98%;
 	height: 15rem;
 	border-bottom: 1px solid #ccc;
 	display: flex;
@@ -23,7 +23,7 @@
 
 .CartItem-content {
 	padding: 1rem;
-	width: 100%;
+	width: 90%;
 	display: flex;
 	justify-content: space-between;
 	flex-direction: column;
@@ -44,4 +44,29 @@
 
 .CartItem-totalprice {
 	text-align: right;
+	font-weight: bold;
+}
+
+@media (max-width: 1200px) {
+	.CartItem {
+		height: 20rem;
+	}
+}
+
+@media (max-width: 1024px) {
+	.CartItem {
+		justify-content: space-around;
+	}
+	.CartItem-image {
+		display: none;
+	}
+	.CartItem-content {
+		width: 60%;
+	}
+	.CartItem-buttons {
+		width: 20%;
+	}
+	.CartItem {
+		height: 30rem;
+	}
 }

@@ -22,7 +22,7 @@
 	border: 1px solid grey;
 	width: 100%;
 	height: calc(100% - 12rem);
-	overflow-y: scroll;
+	overflow-y: auto;
 	overflow-x: hidden;
 }
 
@@ -46,5 +46,11 @@
 	}
 	100% {
 		transform: translateY(0);
+	}
+}
+
+@media (max-width: 1600px) {
+	.Cart-image {
+		display: none;
 	}
 }
