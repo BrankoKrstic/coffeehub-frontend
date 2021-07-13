@@ -30,3 +30,27 @@
 .Login-container label {
 	padding-left: 2rem;
 }
+
+@media (max-width: 1200px) {
+	.Login-form {
+		width: 40%;
+	}
+}
+
+@media (max-width: 1024px) {
+	.Login-form {
+		width: 60%;
+	}
+}
+
+@media (max-width: 768px) {
+	.Login-form {
+		width: 80%;
+	}
+}
+
+@media (max-width: 480px) {
+	.Login-form {
+		width: 90%;
+	}
+}

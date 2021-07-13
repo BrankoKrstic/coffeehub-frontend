@@ -15,3 +15,32 @@
 	font-weight: bold;
 	text-decoration: none;
 }
+
+.Navbar-sidebar-button {
+	display: none;
+}
+
+.Navbar-link-container {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	margin: 0 1rem;
+}
+
+@media (max-width: 1024px) {
+	.Navbar {
+		justify-content: flex-end;
+	}
+	.Navbar-logo {
+		display: none;
+	}
+}
+
+@media (max-width: 768px) {
+	.Navbar-links-inner {
+		display: none;
+	}
+	.Navbar-sidebar-button {
+		display: inline-block;
+	}
+}

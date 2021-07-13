@@ -1,6 +1,5 @@
 import { NavLink } from "react-router-dom";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
+
 import { useSelector, useDispatch } from "react-redux";
 import { useHistory } from "react-router-dom";
 import { signOut } from "../../../../store/actions/auth";
@@ -28,7 +27,7 @@ export default function NavbarLinks() {
 				to="/about"
 				activeClassName="current"
 			>
-				About Us{/*  TODO: IMAGE PARTIALLY ACROSS SCREEN */}
+				About Us
 			</NavLink>
 			{isAdmin && (
 				<>
@@ -49,13 +48,6 @@ export default function NavbarLinks() {
 					<button onClick={logout}>Logout</button>
 				</>
 			)}
-			<NavLink
-				className="Navbar-link"
-				to="/cart"
-				activeClassName="current"
-			>
-				<FontAwesomeIcon icon={faShoppingCart} />
-			</NavLink>
 		</div>
 	);
 }
