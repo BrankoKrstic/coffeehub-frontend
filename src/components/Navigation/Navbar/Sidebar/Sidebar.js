@@ -6,10 +6,11 @@ export default function Sidebar(props) {
 	const { open, toggleSidebarOpen } = props;
 	return (
 		<>
-			<Modal clicked={toggleSidebarOpen} showing={open} />
-			<div className={`Sidebar ${open && "Sidebar-open"}`}>
-				<NavbarLinks />
-			</div>
+			<Modal clicked={toggleSidebarOpen} showing={open}>
+				<div className={`Sidebar ${open && "Sidebar-open"}`}>
+					<NavbarLinks />
+				</div>
+			</Modal>
 		</>
 	);
 }
