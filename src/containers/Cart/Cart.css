@@ -54,3 +54,11 @@
 		display: none;
 	}
 }
+@media (max-width: 768px) {
+	.Cart-summary {
+		margin-right: 4rem;
+	}
+	.Cart-content {
+		width: 90%;
+	}
+}

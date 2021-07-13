@@ -37,3 +37,9 @@
 .CartItemControls-subtractbutton {
 	border-radius: 50% 0 0 50%;
 }
+
+@media (max-width: 768px) {
+	.CartItemControls {
+		margin-right: 4rem;
+	}
+}

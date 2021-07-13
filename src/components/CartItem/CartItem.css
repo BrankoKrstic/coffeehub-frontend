@@ -70,3 +70,17 @@
 		height: 30rem;
 	}
 }
+
+@media (max-width: 768px) {
+	.CartItem {
+		justify-content: space-between;
+		height: 15rem;
+	}
+
+	.CartItem-description {
+		display: none;
+	}
+	.CartItem-content {
+		width: 30%;
+	}
+}

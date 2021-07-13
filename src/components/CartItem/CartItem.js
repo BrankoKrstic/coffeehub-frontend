@@ -17,7 +17,7 @@ export default function CartItem(props) {
 						<strong>Price:</strong> ${price}
 					</p>
 				</div>
-				<p>
+				<p className="CartItem-description">
 					<strong>Description:</strong> {description}
 				</p>
 			</div>

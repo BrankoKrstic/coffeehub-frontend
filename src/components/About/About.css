@@ -87,8 +87,17 @@
 }
 
 @media (max-width: 768px) {
+	.About {
+		height: auto;
+		overflow-y: auto;
+	}
+	.About-content {
+		min-width: 20rem;
+		height: auto;
+		padding: 2rem 0;
+	}
 	.About-content p {
-		width: 90%;
+		width: 80%;
 		line-height: 1.5rem;
 	}
 }

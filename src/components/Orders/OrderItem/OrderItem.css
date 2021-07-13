@@ -37,3 +37,10 @@
 		font-size: 1rem;
 	}
 }
+
+@media (max-width: 768px) {
+	.OrderItem {
+		font-size: 1rem;
+		flex-direction: column;
+	}
+}

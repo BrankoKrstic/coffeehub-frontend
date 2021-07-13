@@ -63,6 +63,7 @@ export default function Store() {
 						<h3>Filters</h3>
 						{filterData.map((btn) => (
 							<Button
+								key={btn.value}
 								filter
 								active={filter === btn.value}
 								clicked={() => setFilter(btn.value)}
