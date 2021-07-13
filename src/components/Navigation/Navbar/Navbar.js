@@ -2,9 +2,12 @@ import { NavLink } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faShoppingCart, faBars } from "@fortawesome/free-solid-svg-icons";
 import NavbarLinks from "./NavbarLinks/NavbarLinks";
+import useToggleState from "../../../hooks/useToggleState";
+import Sidebar from "./Sidebar/Sidebar";
 import "./Navbar.css";
 
 export default function Navbar() {
+	const [sidebarOpen, toggleSidebarOpen] = useToggleState(false);
 	return (
 		<nav className="Navbar">
 			<NavLink to="/" className="Navbar-logo">
@@ -22,11 +25,15 @@ export default function Navbar() {
 					>
 						<FontAwesomeIcon icon={faShoppingCart} />
 					</NavLink>
-					<button className="Navbar-sidebar-button">
+					<button
+						onClick={toggleSidebarOpen}
+						className="Navbar-sidebar-button"
+					>
 						<FontAwesomeIcon icon={faBars} />
 					</button>
 				</div>
 			</div>
+			<Sidebar toggleSidebarOpen={toggleSidebarOpen} open={sidebarOpen} />
 		</nav>
 	);
 }
