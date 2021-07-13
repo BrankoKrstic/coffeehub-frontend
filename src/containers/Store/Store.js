@@ -11,6 +11,7 @@ export default function Store() {
 	const [filter, setFilter] = useState(null);
 	const { products, error, loading } = useSelector((state) => state.product);
 	const { cartItems } = useSelector((state) => state.cart);
+	const [showNotification, setShowNotification] = useState(false);
 	const filterData = [
 		{
 			value: "coffee",
@@ -35,6 +36,10 @@ export default function Store() {
 		} else {
 			dispatch(cartAdd(product, qty));
 		}
+		setShowNotification(true);
+		setTimeout(() => {
+			setShowNotification(false);
+		}, 1000);
 	};
 	const productItems = products.map((product, i) => {
 		if (filter && !product.categories.includes(filter)) {
@@ -50,34 +55,43 @@ export default function Store() {
 		}
 	});
 	return (
-		<div className="Store">
-			<h1>Our Coffees</h1>
-			<div className="Store-main">
-				<div className="Store-filters">
-					<h3>Filters</h3>
-					{filterData.map((btn) => (
-						<Button
-							filter
-							active={filter === btn.value}
-							clicked={() => setFilter(btn.value)}
-						>
-							{btn.text}
+		<>
+			<div className="Store">
+				<h1>Our Coffees</h1>
+				<div className="Store-main">
+					<div className="Store-filters">
+						<h3>Filters</h3>
+						{filterData.map((btn) => (
+							<Button
+								filter
+								active={filter === btn.value}
+								clicked={() => setFilter(btn.value)}
+							>
+								{btn.text}
+							</Button>
+						))}
+						<Button filter clicked={() => setFilter(null)}>
+							Clear filter
 						</Button>
-					))}
-					<Button filter clicked={() => setFilter(null)}>
-						Clear filter
-					</Button>
-				</div>
-				<div className="Store-products">
-					{error ? (
-						"Error loading products"
-					) : loading ? (
-						<Loader />
-					) : (
-						productItems
-					)}
+					</div>
+					<div className="Store-products">
+						{error ? (
+							"Error loading products"
+						) : loading ? (
+							<Loader />
+						) : (
+							productItems
+						)}
+					</div>
 				</div>
 			</div>
-		</div>
+			<div
+				className={`Store-notification ${
+					showNotification ? "ShowNotification" : "HideNotification"
+				}`}
+			>
+				Item Added To Cart
+			</div>
+		</>
 	);
 }
