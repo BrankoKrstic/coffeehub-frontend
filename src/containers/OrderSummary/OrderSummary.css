@@ -75,3 +75,22 @@
 .NotPaid {
 	background-color: rgb(216, 113, 113);
 }
+
+@media (max-width: 1024px) {
+	.OrderSummary h1 {
+		font-size: 1.5rem;
+	}
+	.OrderSummary-content {
+		flex-direction: column;
+	}
+	.OrderSummary-orders {
+		width: 100%;
+		margin: 1rem 0;
+		min-height: 50%;
+		height: auto;
+	}
+	.OrderSummary-data {
+		width: 100%;
+		margin: 1rem 0;
+	}
+}

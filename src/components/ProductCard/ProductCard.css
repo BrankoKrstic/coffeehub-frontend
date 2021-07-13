@@ -25,3 +25,13 @@
 	width: 100%;
 	text-align: left;
 }
+
+@media (max-width: 1600px) {
+	.ProductCard {
+		width: 15rem;
+	}
+	.ProductCard img {
+		width: 14rem;
+		height: 14rem;
+	}
+}

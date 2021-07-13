@@ -52,3 +52,31 @@
 .Payment-total {
 	border-top: 1px solid #333;
 }
+
+@media (max-width: 1200px) {
+	.Payment-summary {
+		width: 80%;
+	}
+}
+
+@media (max-width: 1024px) {
+	.Payment {
+		flex-direction: column-reverse;
+		overflow-y: auto;
+	}
+	.Payment-right {
+		width: 100%;
+		min-height: 35rem;
+	}
+	.Payment-summary {
+		height: auto;
+		overflow-y: auto;
+		margin: 2rem 0;
+	}
+	.Payment-left {
+		min-height: 35rem;
+		width: 100%;
+		padding: 2rem 0;
+		border: none;
+	}
+}

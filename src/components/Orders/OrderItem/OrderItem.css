@@ -25,3 +25,15 @@
 	flex-direction: column;
 	justify-content: space-around;
 }
+
+@media (max-width: 1024px) {
+	.OrderItem {
+		width: 90%;
+		margin: 0.5rem 0;
+		padding-right: 0;
+	}
+	.OrderItem button {
+		padding: 1rem 2rem;
+		font-size: 1rem;
+	}
+}

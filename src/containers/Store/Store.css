@@ -42,3 +42,28 @@
 	flex-direction: row;
 	flex-wrap: wrap;
 }
+
+@media (max-width: 1200px) {
+	.Store-main {
+		flex-direction: column;
+	}
+	.Store-filters {
+		width: 100%;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-around;
+		border-right: none;
+		border-bottom: 1px solid #ddd;
+	}
+	.Store-filters button {
+		text-align: center;
+		padding: 1rem 0;
+	}
+	.Store-filters h3 {
+		display: none;
+	}
+	.Store-products {
+		width: 100%;
+		justify-content: space-around;
+	}
+}

@@ -8,4 +8,5 @@
 body {
 	font-family: "Encode Sans SC", sans-serif;
 	letter-spacing: 1px;
+	overflow-x: hidden;
 }

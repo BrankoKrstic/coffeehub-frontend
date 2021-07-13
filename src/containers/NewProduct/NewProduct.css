@@ -1,6 +1,6 @@
 .NewProduct {
 	width: 100vw;
-	height: calc(100vh - 4.5rem);
+	min-height: calc(100vh - 4.5rem);
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -37,4 +37,26 @@
 .NewProduct-form textarea:focus {
 	border-color: rgb(0, 140, 255);
 	background-color: rgb(199, 229, 253);
+}
+
+@media (max-width: 1200px) {
+	.NewProduct-form {
+		width: 60%;
+	}
+}
+@media (max-width: 1024px) {
+	.NewProduct-form {
+		width: 70%;
+	}
+}
+@media (max-width: 768px) {
+	.NewProduct-form {
+		width: 80%;
+	}
+}
+
+@media (max-width: 480px) {
+	.NewProduct-form {
+		width: 90%;
+	}
 }
