@@ -20,4 +20,4 @@ Make sure to enter a Stripe public key and a server API endpoint as environment 
 
 ## Using the app
 
-Once in the app, you can browse the store and add items to the shopping cart. Clicking on the cart button will lead you through the entire checkout process. Use the test card number "4242 4242 4242 4242" to get past the Stripe payment. To test out the admin dashboard, either connect to my demo backend at `https://evening-hamlet-14401.herokuapp.com/` or set up your own Express bakcend with and load the database with admin account details.
+Once in the app, you can browse the store and add items to the shopping cart. Clicking on the cart button will lead you through the entire checkout process. Use the test card number "4242 4242 4242 4242" to get past the Stripe payment. To test out the admin dashboard, either connect to my demo backend at `https://evening-hamlet-14401.herokuapp.com/` or set up your own Express backend with and load the database with admin account details.
