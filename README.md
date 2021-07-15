@@ -1,70 +1,23 @@
-# Getting Started with Create React App
+# Pathfinder Project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was bootstrapped with Create React App.
 
-## Available Scripts
+It uses React and Redux to render a coffee-themed ecommerce website. It loads items through async Axios calls via Redux Thunk, saves user and cart data to local storage, and features a full Stipe checkout. A [full demo of the app can be found here](https://elegant-hawking-06a46d.netlify.app/). To test out the admin dashboard, go to the [login page](https://elegant-hawking-06a46d.netlify.app/auth-admin) and log in with username: "admin@example.com" pass: "admin".
 
-In the project directory, you can run:
+CoffeeHub relies on a Node.js/Express backend with MongoDB Atlas for data persistence. The code for it can be found in a [separate repository](https://github.com/BrankoKrstic/coffeehub-backend).
 
-### `npm start`
+## To install
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Clone the github repo to your machine.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Execute `cd coffeehub-frontend` into the terminal to go into the repo folder
 
-### `npm test`
+Execute `npm install` to download all dependencies
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+`npm start` to open the project on a development server
 
-### `npm run build`
+Make sure to enter a Stripe public key and a server API endpoint as environment variables if you want to test out the full checkout process. 
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Using the app
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Once in the app, you can browse the store and add items to the shopping cart. Clicking on the cart button will lead you through the entire checkout process. Use the test card number "4242 4242 4242 4242" to get past the Stripe payment. To test out the admin dashboard, either connect to my demo backend at `https://evening-hamlet-14401.herokuapp.com/` or set up your own Express bakcend with and load the database with admin account details.
